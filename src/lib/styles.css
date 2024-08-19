@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Open+Sans&display=swap');
+
+:root {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #bb86fc;
+    --secondary-color: #03dac6;
+    --error-color: #cf6679;
+    --padding: 8px;
+    --base-font-size: 1.5rem;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+    font-size: calc(var(--base-font-size) * 1); /* 16px */
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: calc(var(--padding) * 2);
+    font-family: 'Poppins', sans-serif;
+    font-size: calc(var(--base-font-size) * 2.5);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto) repeat(2, 1fr);
+    gap: var(--padding);
+    align-items: center;
+    padding: calc(var(--padding) * 2);
+}
+
+.header {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+    background-color: #03dac633;
+    background-color: #bb86fc33;
+    color: var(--text-color);
+    padding: var(--padding);
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.header span {
+    padding: var(--padding);
+    font-size: calc(var(--base-font-size) * 1.1);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+    background-color: #1e1e1e;
+    color: var(--text-color);
+    padding: var(--padding);
+    border: 1px solid #bb86fc33;
+    border-radius: calc(var(--padding) / 2);
+    font-size: calc(var(--base-font-size) * 1);
+}
+
+.row>* {
+    padding: var(--padding);
+}
+
+input {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #2a2a2a;
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+    padding: calc(var(--padding) / 2);
+    border-radius: calc(var(--padding) / 2);
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: var(--padding);
+}
+
+button {
+    padding: calc(var(--padding) / 2) var(--padding);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input, button {
+    font-size: calc(var(--base-font-size) * 0.9);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: calc(var(--padding) * 2);
+    padding: 0 calc(var(--padding) * 2);
+}
+
+.controls button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    padding: var(--padding) calc(var(--padding) * 2);
+    cursor: pointer;
+    border-radius: calc(var(--padding) / 2);
+    font-size: calc(var(--base-font-size) * 1);
+}
+
+.controls button:hover {
+    background-color: var(--primary-color);
+}
+
+.controls input {
+    width: 300px;
+    padding: var(--padding);
+    border-radius: calc(var(--padding) / 2);
+}
+
+.error {
+    color: var(--error-color);
+    padding: var(--padding);
+    border-radius: calc(var(--padding) / 2);
+    background-color: rgba(207, 102, 121, 0.1);
+}
+
+.actions {
+    display: flex;
+    gap: calc(var(--padding) / 1);
+}
+
+.action-button {
+    background-color: #bb86fc22;
+    color: var(--text-color);
+    border: none;
+    padding: var(--padding) var(--padding);
+    cursor: pointer;
+    border-radius: calc(var(--padding) / 2);
+}
+
+span .action-button {
+    margin-left: calc(var(--padding) / 1);
+}
+
+.action-button:hover {
+    background-color: var(--secondary-color);
+}
